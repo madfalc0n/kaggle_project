@@ -28,11 +28,11 @@
 
  - 분석한 커널:
 	- [ashrae-great-energy-predictor-iii-eda-model](https://github.com/madfalc0n/kaggle_project/blob/master/great_energy_predict/notebook/20191120/ASHRAE%20-%20Great%20Energy%20Predictor%20III-%20EDA%26Model_2.ipynb)
-	- 
+	- [ASHRAE_energy predict_Half and Half_score 1.11](https://github.com/madfalc0n/kaggle_project/blob/master/great_energy_predict/notebook/20191209/ASHRAE_energy%20predict_Half%20and%20Half_score%201.11.ipynb)
 
  - 달성한 내용:
 	- 커널에 작성되어 있는 코드를 따라 적어보며 전반적인 데이터 분석을 위한 EDA 과정과 모델(LightGBM) 사용하는 방법에 대한 습득
-	- Public score 1.38 달성
+	- Public score 1.11 달성
 
 #### 3. 12월 02일 ~ 13일
  - 목표:
@@ -40,12 +40,14 @@
 	- LGBM 모델 파라미터 튜닝을 통해 스코어(0.97 이하) 낮추기
 
  - 분석한 커널:
-	- [ASHRAE Leak Validation BruteForce Heuristic Search](https://www.kaggle.com/khoongweihao/ashrae-leak-validation-bruteforce-heuristic-search)
-	- [ASHRAE- KFold LightGBM - without leak (1.08)](https://www.kaggle.com/aitude/ashrae-kfold-lightgbm-without-leak-1-08)
+	- [ashrae-leak-validation-heuristic-search-madfalcon](https://github.com/madfalc0n/kaggle_project/blob/master/great_energy_predict/notebook/20191213/ashrae-leak-validation-heuristic-search-madfalcon.ipynb)
+	- [ashrae-kfold-lightgbm-1-09-madfalcon](https://github.com/madfalc0n/kaggle_project/blob/master/great_energy_predict/notebook/20191213/ashrae-kfold-lightgbm-1-09-madfalcon.ipynb)
 
  - 달성한 내용:
+	- KFold 제출 후 public score 1.09 달성
 	- Leak Validation 제출 후 public score 0.97 달성
 
  - 직면한 문제:
 	- KFold + LGBM 모델을 통한 데이터 train 후 predict 부분에서 메모리 부족으로 인해 커널이 끊기는 것으로 보임, fold의 수와 예측정확도를 올리기위한 모델(LGBM) 파라미터 조정 시, 예측부분에서 메모리 사용량이 많이 증가됨에 따라 커널이 끊기는 것으로 보임
 		- fold의 개수를 증가시킬 경우 예측부분에서 상당한 메모리가 사용됨(캐글에서 지원하는 메모리는 16GB, 메모리가 터짐...)
+		- 또한 fold의 개수를 늘린다고 하더라도 항상 성능이 좋아지지는 않음(기존 커널 1.08에서 1.09로 올라버림...)
