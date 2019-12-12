@@ -4,9 +4,11 @@
 
 ### 일정: 2019년 12월 20일 마감
 
+### 평가방식: RMSE
+
 ### 스터디 내용:
 
-#### 1차. 11월 11일 ~ 15일
+#### 1. 11월 11일 ~ 15일
  - 목표:
 	- 데이터 예측을 위해 캐글 컴피티션에 게시된 커널 따라 해보기
 	- 커널에 작성되어있는 코드를 따라 작성 후 제출하여 score 얻기
@@ -19,44 +21,20 @@
 	- 커널에 작성되어 있는 코드를 따라 적어보며 전반적인 데이터 분석을 위한 EDA 과정과 모델(simple linear regression) 사용하는 방법에 대한 습득
 	- Public score 1.88 달성
 
-#### 2차. 11월 18일 ~ 22일
+#### 2. 11월 18일 ~ 29일
  - 목표:
 	- 데이터 예측을 위해 캐글 컴피티션에 게시된 커널 따라 해보기
 	- 커널에 작성되어있는 코드를 따라 작성 후 제출하여 score 얻기
 
  - 분석한 커널:
 	- [ashrae-great-energy-predictor-iii-eda-model](https://github.com/madfalc0n/kaggle_project/blob/master/great_energy_predict/notebook/20191120/ASHRAE%20-%20Great%20Energy%20Predictor%20III-%20EDA%26Model_2.ipynb)
+	- 
 
  - 달성한 내용:
 	- 커널에 작성되어 있는 코드를 따라 적어보며 전반적인 데이터 분석을 위한 EDA 과정과 모델(LightGBM) 사용하는 방법에 대한 습득
 	- Public score 1.38 달성
- 
-#### 3. 11월 4주차(25일 ~ 29일)
- - 목표:
-	- 데이터 예측을 위해 캐글 컴피티션에 게시된 커널 따라 해보기
-	- 커널에 작성되어있는 코드를 따라 작성하고 모델 파라미터를 조정하여 good score 얻기
-	
- - 분석한 커널:
-	- [ashrae-great-energy-predictor-iii-eda-model](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model)
 
- - 달성한 내용:
-
- - 직면한 문제:
-
-
-#### 4. 12월 1주차(02일 ~ 06일)
- - 목표:
-	- 
-
- - 분석한 커널:
-	- [ASHRAE Leak Validation BruteForce Heuristic Search](https://www.kaggle.com/khoongweihao/ashrae-leak-validation-bruteforce-heuristic-search)
-
- - 달성한 내용:
-
- - 직면한 문제:
-
-
-#### 5. 12월 2주차(09일 ~ 13일)
+#### 3. 12월 02일 ~ 13일
  - 목표:
 	- Leak Validation 커널 분석
 	- LGBM 모델 파라미터 튜닝을 통해 스코어(0.97 이하) 낮추기
@@ -70,3 +48,4 @@
 
  - 직면한 문제:
 	- KFold + LGBM 모델을 통한 데이터 train 후 predict 부분에서 메모리 부족으로 인해 커널이 끊기는 것으로 보임, fold의 수와 예측정확도를 올리기위한 모델(LGBM) 파라미터 조정 시, 예측부분에서 메모리 사용량이 많이 증가됨에 따라 커널이 끊기는 것으로 보임
+		- fold의 개수를 증가시킬 경우 예측부분에서 상당한 메모리가 사용됨(캐글에서 지원하는 메모리는 16GB, 메모리가 터짐...)
