@@ -1,33 +1,30 @@
-# ASHRAE - Great Energy Predictor III (수정중)
+# ASHRAE - Great Energy Predictor III
 ---
-### 주소: https://www.kaggle.com/c/ashrae-energy-prediction 
----
-### 일정: 2019년 12월 20일 마감
----
-### 평가방식: RMSE
----
-### 12월 근황 :
----
-- Leak Validation - Constrained Heuristic Search 
- https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments
-	=> Leak Validation  커널**(0.97)** 제출 완료
+### 0. 주소: https://www.kaggle.com/c/ashrae-energy-prediction 
 
-- ASHRAE- KFold LightGBM - without leak (1.08)
-https://www.kaggle.com/aitude/ashrae-kfold-lightgbm-without-leak-1-08
-=> LGBM 모델을 통한 데이터 학습 후 예측부분에서 메모리 부족으로 인해 커널이 끊기는 것으로 보임
-	=> fold의 개수를 **증가**시킬 경우 예측부분에서 상당한 메모리가 사용됨(캐글에서 지원하는 메모리는 16GB, 메모리가 터짐...)
+### 1. 일정: 2019년 12월 20일 마감
 
-1. 파라미터 및 fold 값 조정결과: 
-	1.1 num_leaves의 수 증가 => **1.09**로 하락
-	1.2 fold의 수를 증가 => **1.09**로 하락
-	1.3 fold + num_leaves의 수 => **1.09**로 하락	
-	1.4 데이터 부분 중 outlier 데이터 제외 => **1.12**
+### 2. 평가방식: RMSE
 
-2. 추후 계획:
-	2.1 모델 트레이닝에 들어가는 feature 특성 조정 후 모델링 예정(+ Leak data) 
+### 3. 현재 근황(12월 13일 수정) :
+ - [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
+	- Leak Validation  커널**(0.97)** 제출 완료
+
+ - [ASHRAE- KFold LightGBM - without leak (1.08)](https://www.kaggle.com/aitude/ashrae-kfold-lightgbm-without-leak-1-08)
+	-  LGBM 모델을 통한 데이터 학습 후 예측부분에서 메모리 부족으로 인해 커널이 끊기는 것으로 보임
+	- fold의 개수를 **증가**시킬 경우 예측부분에서 상당한 메모리가 사용됨(캐글에서 지원하는 메모리는 16GB, 메모리가 터짐...)
+
+ - LGBM 파라미터 및 fold 값 조정결과: 
+	1. **num_leaves**의 수 증가: **1.09**로 하락
+	2. **fold**의 수를 증가: **1.09**로 하락
+	3. **fold** + **num_leaves**의 수 증가: **1.09**로 하락	
+	4. **outlier** 데이터 포함 후 모델 트레이닝: **1.12**로 하락
+
+ - 추후 계획:
+	1. 모델 트레이닝에 들어가는 feature 특성 조정 후 모델링 예정(+ Leak data) 
 
 
-### 스터디 내용:
+### 4. 스터디 내용:
 ---
 #### 1. 11월 11일 ~ 15일
  - 목표:
