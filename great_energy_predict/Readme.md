@@ -6,13 +6,16 @@
 
 ### 2. 평가방식: RMSE
 
-### 3. 현재 근황(12월 13일 수정) :
+### 3. 현재 근황(12월 18일 수정) :
  - [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
 	- Leak Validation  커널**(0.97)** 제출 완료
 
  - [ASHRAE- KFold LightGBM - without leak (1.08)](https://www.kaggle.com/aitude/ashrae-kfold-lightgbm-without-leak-1-08)
 	-  LGBM 모델을 통한 데이터 학습 후 예측부분에서 메모리 부족으로 인해 커널이 끊기는 것으로 보임
 	- fold의 개수를 **증가**시킬 경우 예측부분에서 상당한 메모리가 사용됨(캐글에서 지원하는 메모리는 16GB, 메모리가 터짐...)
+
+ - Leak Validation + 3-Fold 2560 leaves + Highway route4 + 
+		- Public score 0.95 달성(TOP 3%)
 
  - LGBM 파라미터 및 fold 값 조정결과: 
 	1. **num_leaves**의 수 증가: **1.09**로 하락
@@ -24,7 +27,7 @@
 	1. 모델 트레이닝에 들어가는 feature 특성 조정 후 모델링 예정(+ Leak data) 
 		- outlier 데이터 항목을 제외하고 트레이닝, 1.08
 			- outlier 데이터에 대해서만 따로 트레이닝 하고 합칠 수 있는 방법?
-
+	2. 
 
 ### 4. 스터디 내용:
 ---
