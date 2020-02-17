@@ -1,12 +1,12 @@
 # ASHRAE - Great Energy Predictor III
 ---
-### 0. 주소: https://www.kaggle.com/c/ashrae-energy-prediction 
+### 주소: https://www.kaggle.com/c/ashrae-energy-prediction 
 
-### 1. 일정: 2019년 12월 20일 마감
+### 일정: 2019년 12월 20일 마감
 
-### 2. 평가방식: RMSE
+### 평가방식: RMSE
 
-### 3. 현재 근황(12월 18일 수정) :
+### 근황일지(12월 18일 최종 수정)
  - [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
 	- Leak Validation  커널**(0.97)** 제출 완료
 
@@ -29,7 +29,7 @@
 			- outlier 데이터에 대해서만 따로 트레이닝 하고 합칠 수 있는 방법?
 	2. 
 
-### 4. 스터디 내용:
+### 스터디 내용
 ---
 #### 1. 11월 11일 ~ 15일
  - 목표:
@@ -74,3 +74,19 @@
 	- KFold + LGBM 모델을 통한 데이터 train 후 predict 부분에서 메모리 부족으로 인해 커널이 끊기는 것으로 보임, fold의 수와 예측정확도를 올리기위한 모델(LGBM) 파라미터 조정 시, 예측부분에서 메모리 사용량이 많이 증가됨에 따라 커널이 끊기는 것으로 보임
 		- fold의 개수를 증가시킬 경우 예측부분에서 상당한 메모리가 사용됨(캐글에서 지원하는 메모리는 16GB, 메모리가 터짐...)
 		- 또한 fold의 개수를 늘린다고 하더라도 항상 성능이 좋아지지는 않음(기존 커널 1.08에서 1.09로 올라버림...)
+
+
+
+#### 4. 12월 13일 ~ 19일
+
+- 분석한 커널:
+   - [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
+
+ - 달성한 내용
+
+    - Leak 된 Data 와 LGBM 을 통해 얻어낸 예측값(Leak Validation + 3-Fold 2560 leaves + Highway route4)을 통해 결과 제출
+   - Public score **0.951** 달성(TOP 10%, Bronze medal)
+
+- 개인소감
+
+  참가자들의 공개된 커널을 통해 데이터의 전반적인 흐름을 분석하고 Leak 된 Data를 통해(약간의 하이퍼파라미터조절) 운이좋게도 동메달을 딴것 같다. 다음 대회에서는 참가자들의 비중이아닌 내가 직접 코드를 작성해보고 나의 비중을 늘려가봐야 겠다.
