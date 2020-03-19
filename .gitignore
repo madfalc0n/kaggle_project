@@ -1,0 +1,7 @@
+*.zip
+*.pptx
+PPTfiles/
+cfg_file/
+csv/
+pic/
+dataset/
