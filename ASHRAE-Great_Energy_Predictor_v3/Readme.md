@@ -6,6 +6,8 @@
 
 ### 평가방식: RMSE
 
+### 결과 : 동메달 획득, Top 10%(333 / 3614)
+
 ### 근황일지(12월 18일 최종 수정)
  - [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
 	- Leak Validation  커널**(0.97)** 제출 완료
@@ -27,7 +29,6 @@
 	1. 모델 트레이닝에 들어가는 feature 특성 조정 후 모델링 예정(+ Leak data) 
 		- outlier 데이터 항목을 제외하고 트레이닝, 1.08
 			- outlier 데이터에 대해서만 따로 트레이닝 하고 합칠 수 있는 방법?
-	2. 
 
 ### 스터디 내용
 ---
@@ -80,8 +81,9 @@
 #### 4. 12월 13일 ~ 19일
 
 - 분석한 커널:
-   - [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
-
+   
+- [Leak Validation - Constrained Heuristic Search](https://www.kaggle.com/kulkarnivishwanath/ashrae-great-energy-predictor-iii-eda-model/comments)
+   
  - 달성한 내용
 
     - Leak 된 Data 와 LGBM 을 통해 얻어낸 예측값(Leak Validation + 3-Fold 2560 leaves + Highway route4)을 통해 결과 제출
